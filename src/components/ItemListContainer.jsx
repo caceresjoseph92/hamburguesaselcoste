@@ -1,21 +1,36 @@
 import React from 'react'
-import Nav from 'react-bootstrap/Nav';
+import products from "../data/product.json"
+import ItemList from './ItemList';
 import Container from 'react-bootstrap/Container';
-import Navbar from 'react-bootstrap/Navbar';
 
-const ItemListContainer = ({ greeting }) => {
+const ItemListContainer = () => {
+
+  async function getData(){
+    try{
+      if(products.length === 0){
+        console.log("No se encuentran productos");
+      } 
+      return products
+    } catch(err){
+      console.log(err)
+    } 
+  }
+
+  async function getProduct(){
+    try{
+      await getData();
+    } catch(err){
+      console.log(err)
+    }
+  }
+
+  getProduct();
   return (
-    <div>
-        <Navbar bg="warning" variant="dark">
-            <Container className="justify-content-center">
-                <Nav activeKey="/home">
-                    <Nav.Item>
-                         <h3>{greeting}</h3>
-                    </Nav.Item>
-                </Nav>
-            </Container>
-        </Navbar>
-    </div>
+    <>
+      <Container fluid="lg">
+        <ItemList products={products}/>
+      </Container>
+    </>
   )
 }
 

@@ -11,7 +11,7 @@ const NavBar = () => {
     <div>
       <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
         <Image className="imagen-hamburguesa" src="src/assets/images/logohamburguesa.jpg" thumbnail roundedCircle/>
-        <Navbar.Brand href="#home"> 
+        <Navbar.Brand> 
             <Nav>
               <Nav.Link href="#home">Hamburguesas el Coste</Nav.Link>
             </Nav>

@@ -1,0 +1,6 @@
+[
+    {"id":1, "name": "Hamburguesa sencilla", "description": "carne de res, queso, verduras", "price": "13000", "category": "Hamburguesas"},
+    {"id":2, "name": "Hamburguesa especial", "description": "doble carne de res, queso, verduras", "price": "16000", "category": "Hamburguesas"},
+    {"id":3, "name": "Perro", "description": "salchicha zenú", "price": "9000", "category": "Perros"},
+    {"id":4, "name": "Perra", "description": "tocineta", "price": "13000", "category": "Perras"}
+]
