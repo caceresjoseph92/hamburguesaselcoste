@@ -1,12 +1,13 @@
 import React from 'react'
 import NavBar from './components/NavBar'
 import ItemListContainer from './components/ItemListContainer';
-
+import CounterWithHook from './components/CounterWithHook';
+//<CounterWithHook />
 const App = () => {
   return (
     <div>
       <NavBar />
-      <ItemListContainer greeting="Menú"/>
+      <ItemListContainer/>
     </div>
   )
 }
