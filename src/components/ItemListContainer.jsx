@@ -1,34 +1,24 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import products from "../data/product.json"
 import ItemList from './ItemList';
 import Container from 'react-bootstrap/Container';
 
 const ItemListContainer = () => {
-
-  async function getData(){
-    try{
-      if(products.length === 0){
-        console.log("No se encuentran productos");
-      } 
-      return products
-    } catch(err){
-      console.log(err)
-    } 
+  const [product, setProduct] = useState([])
+  const getProduct = async () => {
+      const response = await products //fetch(products);
+      //const product = await response.json();
+      return response;    
   }
+  
+  useEffect(() => {
+    getProduct().then((product) => setProduct(product));
+  }, []);
 
-  async function getProduct(){
-    try{
-      await getData();
-    } catch(err){
-      console.log(err)
-    }
-  }
-
-  getProduct();
   return (
     <>
       <Container fluid="lg">
-        <ItemList products={products}/>
+        <ItemList products={product}/>
       </Container>
     </>
   )

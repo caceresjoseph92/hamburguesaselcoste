@@ -1,6 +1,34 @@
 [
-    {"id":1, "name": "Hamburguesa sencilla", "description": "carne de res, queso, verduras", "price": "13000", "category": "Hamburguesas"},
-    {"id":2, "name": "Hamburguesa especial", "description": "doble carne de res, queso, verduras", "price": "16000", "category": "Hamburguesas"},
-    {"id":3, "name": "Perro", "description": "salchicha zenú", "price": "9000", "category": "Perros"},
-    {"id":4, "name": "Perra", "description": "tocineta", "price": "13000", "category": "Perras"}
-]
+    {
+      "id": 1,
+      "name": "Hamburguesa sencilla",
+      "description": "carne de res, queso, verduras",
+      "image": "hamburguesa1.jpg",
+      "price": "13000",
+      "category": "Hamburguesas"
+    },
+    {
+      "id": 2,
+      "name": "Hamburguesa especial",
+      "description": "doble carne de res, queso, verduras",
+      "image": "hamburguesa2.jpg",
+      "price": "16000",
+      "category": "Hamburguesas"
+    },
+    {
+      "id": 3,
+      "name": "Perro sencillo",
+      "description": "salchicha zenú",
+      "image": "perro1.jpg",
+      "price": "9000",
+      "category": "Perros"
+    },
+    {
+      "id": 4,
+      "name": "Perra sencilla",
+      "description": "tocineta",
+      "image": "perra1.jpg",
+      "price": "13000",
+      "category": "Perras"
+    }
+  ]
