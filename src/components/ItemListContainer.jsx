@@ -1,21 +1,26 @@
-import React from 'react'
-import Nav from 'react-bootstrap/Nav';
+import React, { useEffect, useState } from 'react'
+import products from "../data/product.json"
+import ItemList from './ItemList';
 import Container from 'react-bootstrap/Container';
-import Navbar from 'react-bootstrap/Navbar';
 
-const ItemListContainer = ({ greeting }) => {
+const ItemListContainer = () => {
+  const [product, setProduct] = useState([])
+  const getProduct = async () => {
+      const response = await products //fetch(products);
+      //const product = await response.json();
+      return response;    
+  }
+  
+  useEffect(() => {
+    getProduct().then((product) => setProduct(product));
+  }, []);
+
   return (
-    <div>
-        <Navbar bg="warning" variant="dark">
-            <Container className="justify-content-center">
-                <Nav activeKey="/home">
-                    <Nav.Item>
-                         <h3>{greeting}</h3>
-                    </Nav.Item>
-                </Nav>
-            </Container>
-        </Navbar>
-    </div>
+    <>
+      <Container fluid="lg">
+        <ItemList products={product}/>
+      </Container>
+    </>
   )
 }
 
