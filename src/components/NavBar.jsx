@@ -5,6 +5,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Image from 'react-bootstrap/Image'
+import { LinkContainer } from 'react-router-dom';
 
 const NavBar = () => {
   return (
@@ -19,11 +20,11 @@ const NavBar = () => {
         <Container className="justify-content-center">
                 <Nav>
                   <NavDropdown title="Categorías" id="collasible-nav-dropdown">
-                    <NavDropdown.Item eventKey="0.1">Hamburguesas</NavDropdown.Item>
-                    <NavDropdown.Item eventKey="0.2">Perros</NavDropdown.Item>
-                    <NavDropdown.Item eventKey="0.3">Perras</NavDropdown.Item>
-                    <NavDropdown.Item eventKey="0.4">Chuzos</NavDropdown.Item>
-                    <NavDropdown.Item eventKey="0.5">Picadas</NavDropdown.Item>
+                  <LinkContainer to={`/category/${"Perros"}`}>
+                    <NavDropdown.Item>
+                      Hamburguesas
+                    </NavDropdown.Item>
+                  </LinkContainer>                    
                   </NavDropdown>
                 </Nav>
         </Container>

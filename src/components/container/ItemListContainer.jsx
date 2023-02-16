@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import products from "../data/product.json"
+import products from "../../data/product.json"
 import ItemList from './ItemList';
 import Container from 'react-bootstrap/Container';
 
