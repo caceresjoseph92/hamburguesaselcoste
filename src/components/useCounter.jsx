@@ -13,14 +13,17 @@ const decremet = () => {
   setCounter(counter - 1);
 }
 
+/*
 const reset = () => {
   setCounter(0);
 }
+*/
+
   return {
     counter,
     increment,
     decremet,
-    reset
+    //reset
   }
 }
 
