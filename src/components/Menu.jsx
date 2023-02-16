@@ -4,13 +4,13 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 
 const Menu = ({id, name}) => {
     return (
-        <>
-            <LinkContainer to={`/category/${name}`}>
-                <NavDropdown.Item key={id}>
+        <div >
+            <LinkContainer key={id} to={`/category/${name}`}>
+                <NavDropdown.Item>
                     {name}
                 </NavDropdown.Item>
             </LinkContainer>
-        </>
+        </div>
     )
 }
 

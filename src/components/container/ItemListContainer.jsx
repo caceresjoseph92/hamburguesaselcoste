@@ -2,23 +2,30 @@ import React, { useEffect, useState } from 'react'
 import products from "../../data/product.json"
 import ItemList from './ItemList';
 import Container from 'react-bootstrap/Container';
+import { useParams } from 'react-router-dom';
 
 const ItemListContainer = () => {
-  const [product, setProduct] = useState([])
-  const getProduct = async () => {
-      const response = await products //fetch(products);
-      //const product = await response.json();
-      return response;    
-  }
-  
-  useEffect(() => {
-    getProduct().then((product) => setProduct(product));
-  }, []);
-
+  const {category} = useParams()
+  const [product, setProduct] = useState([]);
+    useEffect(() => {
+      async function responseData() {
+        try{
+          const response = await products //fetch(products)
+          //const data = await response.json();
+          setProduct(response)
+        } catch (err){
+          console.log(err)
+        }
+      }
+      responseData()
+    }, []);
+    const productFilter = product.filter((prod) => prod.category == category);
   return (
     <>
       <Container fluid="lg">
-        <ItemList products={product}/>
+        {
+          category ? <ItemList products={productFilter} /> : <ItemList products={products} />
+        }
       </Container>
     </>
   )

@@ -1,10 +1,12 @@
 import React from 'react'
-import NavBar from './components/NavBar'
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+
 import Home from './components/Home';
-import ItemListContainer from './components/container/ItemListContainer';
 import Car from './components/Car';
-//<CounterWithHook />
+import NavBar from './components/NavBar'
+import ItemListContainer from './components/container/ItemListContainer';
+import ItemDetailContainer from './components/container/ItemDetailContainer';
+
 const App = () => {
   return (
     <BrowserRouter>
@@ -17,6 +19,10 @@ const App = () => {
       <Route 
         exact path="/category/:category" 
         element={<ItemListContainer />}>
+      </Route>
+      <Route 
+        exact path="/item/:id" 
+        element={<ItemDetailContainer />}>
       </Route>
       <Route 
         exact path="/car" 

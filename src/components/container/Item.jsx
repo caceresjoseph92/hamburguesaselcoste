@@ -2,11 +2,12 @@ import React from 'react'
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
+import { Link } from 'react-router-dom';
 
 const Item = ({id, name, image, price, category}) => {
   return (
     <Col>
-    <Card  key={id} style={{ width: '18rem' }}>
+    <Card key={id} style={{ width: '18rem' }}>
         <Card.Img variant="top" src={"../src/assets/images/"+image} />
         <Card.Body>
             <Card.Title>
@@ -19,7 +20,9 @@ const Item = ({id, name, image, price, category}) => {
                 <strong>Category:</strong> {category}
             </Card.Text>
         <div className="d-flex justify-content-center">
-            <Button variant="success">Detalle</Button>
+            <Link to={`/item/${id}`}>
+                <Button variant="success">Detalle</Button>
+            </Link>
         </div>
         </Card.Body>
     </Card>
