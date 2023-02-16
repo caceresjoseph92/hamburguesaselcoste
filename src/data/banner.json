@@ -1,0 +1,32 @@
+[
+    {
+      "id": 1,
+      "title": "Hamburguesas el coste",
+      "description":"No dejes para mañana lo que puedes comerte hoy.",
+      "image":"../src/assets/images/banner/banner2.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Hamburguesas el coste",
+      "description":"Alegrar corazones por medio de nuestra comida es nuestro propósito.",
+      "image":"../src/assets/images/banner/banner1.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Hamburguesas el coste",
+      "description":"No puedes comprar la felicidad pero si esta delicia.",
+      "image":"../src/assets/images/banner/banner3.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Hamburguesas el coste",
+      "description":"Tripa vacia corazón sin alegría.",
+      "image":"../src/assets/images/banner/banner4.jpg"
+    },
+    {
+      "id": 5,
+      "title": "Hamburguesas el coste",
+      "description":"Un restaurante que fomenta las relaciones y alimenta corazones.",
+      "image":"../src/assets/images/banner/banner5.jpg"
+    }
+  ]

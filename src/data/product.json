@@ -30,5 +30,37 @@
       "image": "perra1.jpg",
       "price": "13000",
       "category": "Perras"
+    },
+    {
+      "id": 5,
+      "name": "Picada sencilla",
+      "description": "picada con huevo, tomoate, platano, chicharron, carne de res.",
+      "image": "picada1.jpg",
+      "price": "20000",
+      "category": "Picadas"
+    },
+    {
+      "id": 6,
+      "name": "Picada especial",
+      "description": "morcilla, papa, platano, pollo, res, chorizo acompañada de guacamole.",
+      "image": "picada2.jpg",
+      "price": "25000",
+      "category": "Picadas"
+    },
+    {
+      "id": 7,
+      "name": "Chuzo de pollo",
+      "description": "chuzo de pollo con tomate, pimenton, cebolla y camarones.",
+      "image": "chuzo1.jpg",
+      "price": "15000",
+      "category": "Chuzos"
+    },
+    {
+      "id": 8,
+      "name": "Chuzo de res",
+      "description": "chuzo de res con tomate, pimenton, cebolla.",
+      "image": "chuzo2.jpg",
+      "price": "15000",
+      "category": "Chuzos"
     }
   ]
