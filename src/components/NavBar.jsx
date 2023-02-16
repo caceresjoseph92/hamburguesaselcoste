@@ -5,26 +5,32 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Image from 'react-bootstrap/Image'
-import { LinkContainer } from 'react-router-dom';
+import Menu from './Menu';
+import { LinkContainer } from 'react-router-bootstrap';
+import categorys from "../data/category.json"
 
 const NavBar = () => {
   return (
     <div>
       <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-        <Image className="imagen-hamburguesa" src="src/assets/images/logohamburguesa.jpg" thumbnail roundedCircle/>
+        <Image className="imagen-hamburguesa" src="../src/assets/images/logohamburguesa.jpg" thumbnail roundedCircle/>
         <Navbar.Brand> 
             <Nav>
-              <Nav.Link href="#home">Hamburguesas el Coste</Nav.Link>
+              <LinkContainer to={`/`}>
+                <Nav.Link>Hamburguesas el Coste</Nav.Link>
+              </LinkContainer>   
             </Nav>
         </Navbar.Brand>
         <Container className="justify-content-center">
                 <Nav>
                   <NavDropdown title="Categorías" id="collasible-nav-dropdown">
-                  <LinkContainer to={`/category/${"Perros"}`}>
-                    <NavDropdown.Item>
-                      Hamburguesas
-                    </NavDropdown.Item>
-                  </LinkContainer>                    
+                     {categorys.map((category) => (
+                        <Menu 
+                          key={category.id}
+                          id={category.id}
+                          name={category.name}
+                        />
+                    ))}   
                   </NavDropdown>
                 </Nav>
         </Container>
